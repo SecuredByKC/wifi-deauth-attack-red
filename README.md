@@ -1,4 +1,6 @@
 # Portfolio-DeauthAttack 🔓📡
+![Kali Linux](https://img.shields.io/badge/Tested%20On-Kali%20Linux%202025.1-blue?logo=kalilinux)
+![VMware](https://img.shields.io/badge/Platform-VMware%20Workstation-lightgrey?logo=vmware)
 
 This repository documents my **controlled Wi-Fi deauthentication (deauth) attack** and **WPA2 handshake capture** performed inside a **Kali Linux VM running on VMware Workstation Pro**. The exercise highlights how attackers can exploit unprotected 802.11 management frames to forcibly disconnect clients and capture WPA2 handshakes for offline password analysis. The purpose of this project is to provide a practical, hands-on example of offensive wireless testing, with future expansion into defensive monitoring strategies. While the attack itself is disruptive, it also offers valuable lessons for defenders who need to recognize and mitigate such activity in real-world environments.
 
