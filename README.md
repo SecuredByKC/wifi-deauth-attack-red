@@ -124,5 +124,5 @@ This methodology is provided for **defensive education**. Always obtain **explic
 
 ## 👤 Author
 
-**Karim Cherradi** — Cybersecurity Student & Ethical Hacker in Training  
+**Karim Cherradi**
 GitHub: [@SecuredByKC](https://github.com/SecuredByKC)
