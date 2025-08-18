@@ -1,6 +1,6 @@
 # Portfolio-DeauthAttack 🔓📡
 
-This repository documents my **controlled Wi-Fi deauthentication (deauth) attack** and **WPA2 handshake capture** performed inside a **Kali Linux VM running on VMware Workstation Pro**. The exercise highlights how attackers can exploit unprotected 802.11 management frames to forcibly disconnect clients and capture WPA2 handshakes for offline password analysis. The purpose of this project is to provide a practical, hands-on example of both offensive wireless testing and defensive monitoring strategies. While the attack itself is disruptive, it also offers valuable lessons for defenders who need to recognize and mitigate such activity in real-world environments.
+This repository documents my **controlled Wi-Fi deauthentication (deauth) attack** and **WPA2 handshake capture** performed inside a **Kali Linux VM running on VMware Workstation Pro**. The exercise highlights how attackers can exploit unprotected 802.11 management frames to forcibly disconnect clients and capture WPA2 handshakes for offline password analysis. The purpose of this project is to provide a practical, hands-on example of offensive wireless testing, with future expansion into defensive monitoring strategies. While the attack itself is disruptive, it also offers valuable lessons for defenders who need to recognize and mitigate such activity in real-world environments.
 
 **The objective:** force a client on **my own test network** to disconnect, capture the WPA2 handshake, and crack a weak passphrase with the `aircrack-ng` suite.
 
@@ -95,6 +95,24 @@ Run a dictionary attack with `rockyou.txt` against the handshake capture.
 
 - Step screenshots (evidence)  
 - This `README.md` documenting methodology, tooling, and lab setup
+
+---
+
+## 🔮 Future Work
+
+This project currently focuses on the offensive (red-team) side of wireless security: running a controlled deauthentication attack, capturing WPA2 handshakes, and performing a dictionary attack.
+
+Planned enhancements include adding the defensive (blue-team) perspective, such as:
+
+🟦 Wireshark Analysis – capturing traffic and using filters (e.g., wlan.fc.type_subtype == 12) to detect abnormal deauthentication frames
+
+🟦 Kismet Alerts – demonstrating how intrusion detection tools flag suspicious deauth activity
+
+🟦 Countermeasures – testing WPA3 and Protected Management Frames (802.11w) to show how they mitigate this type of attack
+
+🟦 Monitoring Dashboards – documenting methods to log or visualize spikes in deauth/disassociation frames
+
+These additions will help balance the red-team exercise with the blue-team strategies used in real-world wireless defense.
 
 ---
 
