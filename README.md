@@ -1,6 +1,8 @@
 # Portfolio-DeauthAttack 🔓📡
 
-This repository documents my **controlled Wi-Fi deauthentication (deauth) attack** and **WPA2 handshake capture** performed inside a **Kali Linux VM running on VMware Workstation Pro**. The objective: force a client on **my own test network** to disconnect, capture the WPA2 handshake, and crack a weak passphrase with the `aircrack-ng` suite.
+This repository documents my **controlled Wi-Fi deauthentication (deauth) attack** and **WPA2 handshake capture** performed inside a **Kali Linux VM running on VMware Workstation Pro**. The exercise highlights how attackers can exploit unprotected 802.11 management frames to forcibly disconnect clients and capture WPA2 handshakes for offline password analysis. The purpose of this project is to provide a practical, hands-on example of both offensive wireless testing and defensive monitoring strategies. While the attack itself is disruptive, it also offers valuable lessons for defenders who need to recognize and mitigate such activity in real-world environments.
+
+**The objective:** force a client on **my own test network** to disconnect, capture the WPA2 handshake, and crack a weak passphrase with the `aircrack-ng` suite.
 
 > ⚠️ **Ethical Notice:** Performed only on a network I own, strictly for education and portfolio purposes. Do **not** test on networks without explicit authorization.
 
@@ -79,10 +81,13 @@ Run a dictionary attack with `rockyou.txt` against the handshake capture.
 
 ## ✅ Key Takeaways
 
-- Practical use of **monitor mode** and **packet injection** to obtain a WPA2 handshake  
-- Understanding of **BSSID vs. client MAC** roles during deauth  
-- Successful **dictionary attack** demonstrating risk of weak passphrases  
-- Solid **VMware + USB Wi-Fi** lab configuration with **ALFA AWUS036ACM** adapters
+- Practical use of monitor mode and packet injection to capture WPA2 handshakes in a controlled lab.
+
+- Developed a clear understanding of BSSID (access point) vs. client MAC (station) roles during deauthentication attacks.
+
+- Demonstrated a successful dictionary attack, highlighting the risks of weak Wi-Fi passphrases.
+
+- Built a reliable virtualized lab environment using VMware Workstation Pro and ALFA AWUS036ACM USB adapters for wireless testing.
 
 ---
 
