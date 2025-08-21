@@ -1,4 +1,4 @@
-# Wi-Fi Deauth Attack (Red Team) 🔴🔓📡
+# Wi-Fi Deauth Attack (Red Team) 🔴📡
 ![Kali Linux](https://img.shields.io/badge/Tested%20On-Kali%20Linux%202025.1-blue?logo=kalilinux)
 ![VMware](https://img.shields.io/badge/Platform-VMware%20Workstation-lightgrey?logo=vmware)
 
