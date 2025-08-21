@@ -100,21 +100,23 @@ Run a dictionary attack with `rockyou.txt` against the handshake capture.
 
 ---
 
-## 🔮 Future Work
+## 🔬 Blue Team Companion Lab  
 
-This project currently focuses on the offensive (red-team) side of wireless security: running a controlled deauthentication attack, capturing WPA2 handshakes, and performing a dictionary attack.
+This project currently focuses on the offensive (red-team) side of wireless security: running a controlled deauthentication attack, capturing WPA2 handshakes, and performing a dictionary attack.  
 
-Planned enhancements include adding the defensive (blue-team) perspective, such as:
+To complement it, I built a **defensive (blue-team) lab** here:  
+👉 **[Wi-Fi Deauth Detection (Blue Team Lab)](https://github.com/SecuredByKC/wifi-deauth-detection-blue)**  
 
-🟦 Wireshark Analysis – capturing traffic and using filters (e.g., wlan.fc.type_subtype == 12) to detect abnormal deauthentication frames
+In the Blue Team lab, I:  
 
-🟦 Kismet Alerts – demonstrating how intrusion detection tools flag suspicious deauth activity
+-  **Captured Wi-Fi traffic with airodump-ng** in passive mode to collect management frames from the target AP.  
+-  **Converted PCAPs into CSV** with `tshark` to extract key 802.11 fields (time, subtype, source, destination, BSSID).  
+-  **Ingested the dataset into Splunk Enterprise** and created a custom `wifi_csv` sourcetype for analysis.  
+-  **Queried for deauthentication frames (`0x000c`)** and confirmed attack spikes.  
+-  **Built timechart visualizations** comparing deauth activity against normal management traffic (beacon, auth, association).  
+-  **Summarized attack windows** and documented how Splunk baselining makes detection repeatable, unlike one-off packet inspection.  
 
-🟦 Countermeasures – testing WPA3 and Protected Management Frames (802.11w) to show how they mitigate this type of attack
-
-🟦 Monitoring Dashboards – documenting methods to log or visualize spikes in deauth/disassociation frames
-
-These additions will help balance the red-team exercise with the blue-team strategies used in real-world wireless defense.
+This provides a defensive perspective to balance the offensive red-team exercise and demonstrates how real-world defenders can detect and investigate wireless DoS attacks.  
 
 ---
 
